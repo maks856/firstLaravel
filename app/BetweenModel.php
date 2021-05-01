@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactModel extends Model
+class BetweenModel extends Model
 {
+    public $timestamps = false;
     use HasFactory;
 }

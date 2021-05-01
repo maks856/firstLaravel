@@ -17,16 +17,6 @@ Contact
         cupidatat non proident, sunt in culpa qui officia
         deserunt mollit anim id est laborum.</p>
 
-    @if($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
-
     <form action="{{ route('contact-form') }}" method="post">
         @csrf
         <div class="form-group">
@@ -36,6 +26,10 @@ Contact
         <div class="form-group">
             <label for="email">Email</label>
             <input type="text" name="email" placeholder="Enter email" id="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="theme">Theme</label>
+            <input type="text" name="theme" placeholder="Enter theme" id="theme" class="form-control">
         </div>
         <div class="form-group">
             <label for="message">Message</label>

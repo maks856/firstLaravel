@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContactModelsTable extends Migration
+class CreateBetweenModelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateContactModelsTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_models', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+        Schema::create('between_models', function (Blueprint $table) {
             $table->string('email');
-            $table->text('message');
-            $table->timestamps();
+            $table->string('theme');
         });
     }
 
@@ -29,6 +26,6 @@ class CreateContactModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_models');
+        Schema::dropIfExists('between_models');
     }
 }
